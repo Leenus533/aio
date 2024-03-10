@@ -143,7 +143,7 @@ Category:`;
       .map((item) => `Subject: ${item.subject}\nSnippet: ${item.snippet}`)
       .join("\n\n");
 
-    const prompt = `Please summarize the following email content and be freindly to the user and engaging:\n\n${contentText}\n\nSummary:`;
+    const prompt = `Please summarize the following email content and be freindly to the user and engaging and include emojis:\n\n${contentText}\n\nSummary:`;
 
     try {
       const response = await fetch(
@@ -237,9 +237,13 @@ Category:`;
     {/each}
     <Button class="mx-auto" on:click={fetchEmails}>Fetch Emails</Button>
   {:else}
-    <div class="mx-auto center">
-      <h1>Please Connect your Social Media Accounts</h1>
-      <Button href="/settings">Settings</Button>
+    <div class="flex justify-center items-center h-screen">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-xl font-bold mb-2 text-center">
+          Please Connect your Social Media Accounts
+        </h1>
+        <Button href="/settings" class="mx-0">Settings</Button>
+      </div>
     </div>
   {/if}
 </main>
