@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { Button } from "$lib/components/ui/button";
   import { env } from "$env/dynamic/public";
+  import SocialIcons from "@rodneylab/svelte-social-icons";
   //@ts-ignore
   import { getCookie, setCookie, deleteCookie } from "svelte-cookie";
 
@@ -73,9 +74,13 @@
   <div>
     <h1 class="text-2xl font-bold mb-4">Settings</h1>
 
-    <h2 class="text-xl font-bold mb-2">Gmail</h2>
+    <div class="flex items-center">
+      <SocialIcons network="google" width={24} height={24} />
+      <h2 class="text-xl font-bold mb-2 text-center">Gmail</h2>
+    </div>
     {#if gmailAuthenticated}
       <Button
+        class="mx-auto"
         on:click={() => {
           deleteCookie("gmail_access_token"), (gmailAuthenticated = false);
         }}
@@ -86,9 +91,13 @@
       <Button on:click={handleGmailConnectClick}>Connect to Gmail</Button>
     {/if}
 
-    <h2 class="text-xl font-bold mt-4 mb-2">Discord</h2>
+    <div class="flex items-center">
+      <SocialIcons network="discord" width={24} height={24} />
+      <h2 class="text-xl font-bold mb-2 text-center">Discord</h2>
+    </div>
     {#if discordAuthenticated}
       <Button
+        class="mx-auto"
         on:click={() => {
           deleteCookie("discord_access_token");
           discordAuthenticated = false;
@@ -99,5 +108,21 @@
     {:else}
       <Button on:click={handleDiscordConnectClick}>Connect to Discord</Button>
     {/if}
+
+    <div class="flex items-center">
+      <SocialIcons network="facebook" width={24} height={24} />
+      <h2 class="text-xl font-bold mb-2 text-center">Facebook</h2>
+    </div>
+    <Button class="mx-auto">Connect to Facebook</Button>
+    <div class="flex items-center">
+      <SocialIcons network="twitter" width={24} height={24} />
+      <h2 class="text-xl font-bold mb-2 text-center">x</h2>
+    </div>
+    <Button class="mx-auto">Connect to x</Button>
+    <div class="flex items-center">
+      <SocialIcons network="reddit" width={24} height={24} />
+      <h2 class="text-xl font-bold mb-2 text-center">Reddit</h2>
+    </div>
+    <Button>Connect to Reddit</Button>
   </div>
 </main>

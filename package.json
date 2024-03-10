@@ -25,6 +25,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@rodneylab/svelte-social-icons": "^0.0.28",
     "bits-ui": "^0.19.5",
     "clsx": "^2.1.0",
     "discord.js": "^14.14.1",
