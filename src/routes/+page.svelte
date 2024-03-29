@@ -238,13 +238,23 @@ Category:`;
       <div class="spinner"></div>
     {/if}
   {:else}
-    <div class="flex justify-center items-center h-screen">
-      <div class="flex flex-col justify-center items-center">
-        <h1 class="text-xl font-bold mb-2 text-center">
-          Please Connect your Social Media Accounts
-        </h1>
+    <section
+      class="hero relative p-8 text-center bg-cover bg-center min-h-[70vh] rounded-lg"
+      style="background-image: url('/src/images/hero-image.webp');"
+    >
+      <div
+        class="overlay absolute top-0 left-0 right-0 bottom-0 rounded-lg"
+      ></div>
+      <div class="relative z-10">
+        <h1 class="text-8xl font-bold mb-4 text-white outlined-text">Aio</h1>
+        <h2 class="text-4xl font-bold mb-4 text-white outlined-text">
+          Transform Your Social Media Experience
+        </h2>
+        <p class="text-xl mb-8 text-white outlined-text">
+          Manage your digital life with curated content tailored just for you.
+        </p>
         <Button href="/settings" class="mx-0">Settings</Button>
       </div>
-    </div>
+    </section>
   {/if}
 </main>

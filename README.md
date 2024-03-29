@@ -1,4 +1,5 @@
-# AIo
+# AIo - AI Hackathon Encode London
+[Link to blog](https://www.blog.encode.club/ai-hackathon-london-2024-winners-summary-e337a8217c41)
 
 ## The Challenge
 Social media dependency has skyrocketed since COVID-19, fundamentally changing the communication, news consumption, and how we interact with the world. Lockdowns and social isolation accelerated this reliance, cementing social media as a vital tool for staying informed, entertained, and maintaining relationships. We need healthy and sustainable strategies to manage our digital lives.
@@ -19,4 +20,5 @@ We present an all-in-one solution that empowers users to reduce mindless scrolli
 ## Resources
 - [Alarming Average Screen Time](https://explodingtopics.com/blog/screen-time-stats)
 - [The Bright and Dark Sides of Social Media during Covid-19](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10123536/)
-SS
+
+![Demo of the MVP](/static/demo.gif)
