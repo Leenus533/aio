@@ -106,24 +106,26 @@
           Disconnect
         </Button>
       {:else}
-        <Button on:click={handleDiscordConnectClick}>Connect to Discord</Button>
+        <Button disabled on:click={handleDiscordConnectClick}
+          >Connect to Discord</Button
+        >
       {/if}
 
       <div class="flex items-center">
         <SocialIcons network="facebook" width={24} height={24} />
         <h2 class="text-xl font-bold mb-2 text-center">Facebook</h2>
       </div>
-      <Button class="mx-auto">Connect to Facebook</Button>
+      <Button disabled class="mx-auto">Connect to Facebook</Button>
       <div class="flex items-center">
         <SocialIcons network="twitter" width={24} height={24} />
         <h2 class="text-xl font-bold mb-2 text-center">x</h2>
       </div>
-      <Button class="mx-auto">Connect to x</Button>
+      <Button disabled class="mx-auto">Connect to x</Button>
       <div class="flex items-center">
         <SocialIcons network="reddit" width={24} height={24} />
         <h2 class="text-xl font-bold mb-2 text-center">Reddit</h2>
       </div>
-      <Button>Connect to Reddit</Button>
+      <Button disabled>Connect to Reddit</Button>
     </div>
   </div>
 </main>

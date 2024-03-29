@@ -7,7 +7,6 @@
   import { Label } from "$lib/components/ui/label";
   //@ts-ignore
   import { getCookie } from "svelte-cookie";
-  import type { fromJSON } from "postcss";
   import {
     Dialog,
     DialogContent,
@@ -235,7 +234,9 @@ Category:`;
         <Card.Footer>{item.category}</Card.Footer>
       </Card.Root>
     {/each}
-    <Button class="mx-auto" on:click={fetchEmails}>Fetch Emails</Button>
+    {#if content.length === 0}
+      <div class="spinner"></div>
+    {/if}
   {:else}
     <div class="flex justify-center items-center h-screen">
       <div class="flex flex-col justify-center items-center">
